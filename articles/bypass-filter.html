@@ -10,17 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background: #f9fafb; color: #1f2937; }
+    body { font-family: 'Open Sans', sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
     header {
       background: linear-gradient(135deg, #1f2937, #0ea5e9);
       color: #fff; padding: 80px 20px 50px;
       text-align: center; font-family: 'Chakra Petch', sans-serif;
+      position: relative; overflow: hidden;
     }
-    header h1 { font-size: 3rem; margin-bottom: 12px; letter-spacing: -0.5px; }
-    header p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: auto; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1rem; opacity: 0.85; max-width: 600px; margin: auto; }
     nav {
       background: #111827; display: flex; justify-content: center;
-      gap: 24px; padding: 16px 0;
+      flex-wrap: wrap; gap: 20px; padding: 14px 0;
     }
     nav a {
       color: #e0f2fe; text-decoration: none; font-weight: 600;
@@ -32,108 +33,102 @@
     }
     nav a:hover::after { width: 100%; }
     .container {
-      max-width: 1200px; margin: auto; padding: 40px 20px;
-      display: grid; grid-template-columns: 3fr 1fr; gap: 30px;
+      max-width: 1200px; margin: auto; padding: 20px;
+      display: flex; flex-wrap: wrap; gap: 30px;
     }
     main {
-      background: #ffffff; padding: 48px;
-      border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+      flex: 1 1 700px; background: #ffffff; padding: 30px;
+      border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
-    main h2, main h3 {
-      background: rgba(14,165,233,0.07);
-      padding: 18px 20px;
+    .sidebar {
+      flex: 1 1 280px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
       border-radius: 12px;
-      margin-bottom: 24px;
-      font-weight: 700;
-    }
-    main h2 {
-      font-size: 2rem;
-      color: #0f172a;
-      border-left: 6px solid #0ea5e9;
-    }
-    main h3 {
-      font-size: 1.35rem;
-      color: #1e3a8a;
-      border-left: 4px solid #3b82f6;
-      margin-top: 50px;
-    }
-    main p, main li { font-size: 1.1rem; line-height: 1.9; margin-bottom: 20px; }
-    main ul { padding-left: 24px; }
-    .article-container figure {
-      float: right;
-      margin: 0 0 20px 24px;
-      width: 240px; max-width: 40%; text-align: center;
-    }
-    .article-container img {
-      width: 100%; border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-    .article-container figcaption {
-      font-size: 0.9em; color: #6b7280; margin-top: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      height: fit-content;
     }
     .breadcrumb {
       font-size: 0.9rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     .breadcrumb a { color: #3b82f6; text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
     .ad-banner-top, .ad-banner-bottom {
       background: #fdf6e3;
       border: 2px dashed #fbbf24;
-      padding: 20px;
+      padding: 16px;
       text-align: center;
-      margin: 40px 0;
-      font-weight: 600; font-size: 1.15rem;
-      border-radius: 10px;
+      margin: 30px 0;
+      font-weight: 600; font-size: 1rem;
+      border-radius: 8px;
     }
-    .sidebar {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    h2, h3 {
+      background: rgba(14,165,233,0.07);
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin: 30px 0 20px;
+    }
+    h2 {
+      font-size: 1.75rem;
+      color: #0f172a;
+      border-left: 5px solid #0ea5e9;
+    }
+    h3 {
+      font-size: 1.25rem;
+      color: #1e3a8a;
+      border-left: 4px solid #3b82f6;
+    }
+    p, li {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    ul { padding-left: 20px; }
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+    figure img {
+      max-width: 100%; height: auto;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    figcaption {
+      font-size: 0.85rem; color: #6b7280; margin-top: 8px;
     }
     .sidebar h3 {
-      font-size: 1.25rem;
-      margin-bottom: 20px;
-      color: #111827;
+      font-size: 1.1rem; margin-bottom: 14px; color: #111827;
     }
-    .sidebar ul {
-      list-style: none; padding-left: 0;
+    .sidebar ul { list-style: none; padding-left: 0; }
+    .sidebar li {
+      margin-bottom: 12px;
     }
-    .sidebar ul li {
-      margin-bottom: 14px;
+    .sidebar li a {
+      color: #2563eb; text-decoration: none; font-weight: 600;
     }
-    .sidebar ul li a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .sidebar ul li a:hover {
+    .sidebar li a:hover {
       color: #1d4ed8;
       text-decoration: underline;
     }
     footer {
       background: #111827; color: #e5e7eb;
-      text-align: center; padding: 30px; margin-top: 60px;
-      font-size: 1rem;
+      text-align: center; padding: 24px; margin-top: 40px;
+      font-size: 0.95rem;
     }
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     @media screen and (max-width: 768px) {
-      .container { grid-template-columns: 1fr; }
-      .article-container figure {
-        float: none;
-        width: 100%;
-        margin: 20px auto;
-      }
+      .container { flex-direction: column; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 0.95rem; }
     }
   </style>
 </head>
 <body>
-  <header style="position:relative; overflow:hidden;">
-    <img src="https://tse4.mm.bing.net/th/id/OIP.nagDwLiDMIZvFsocbllYcgHaE5?pid=Api" alt="Realistic Car" style="width:180px; position:absolute; top:-20px; right:-40px; transform:rotate(6deg); z-index:5; opacity:0.95;">
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Mercedes-Benz_C_63_AMG_Coupe_2012.png" alt="Realistic Car" style="width:180px; position:absolute; top:-20px; right:-40px; transform:rotate(6deg); z-index:5; opacity:0.95;">
     <h1>Bypass Filters Hub</h1>
     <p>Breaking down oil filtration one micron at a time.</p>
   </header>
@@ -147,42 +142,34 @@
     <main>
       <div class="breadcrumb"><a href="../index.html">Home</a> › What Is a Bypass Filter?</div>
       <div class="ad-banner-top">[ Top Banner Ad Placeholder ]</div>
-      <div class="article-container">
-        <h2>What Is a Bypass Filter?</h2>
-<p>Okay, so let’s say your bike or scooter needs oil to keep the wheels spinning smoothly. A car’s engine is kind of the same — it needs <strong>engine oil</strong> to stay cool and run well. But after a while, the oil gets dirty from all the dust, heat, and gunk inside the engine. That’s where a <strong>bypass filter</strong> comes in — a special type of <strong>engine oil filter</strong> that’s really good at cleaning things up.</p>
-<p>That’s where a bypass filter comes in. It’s like a special cleaning gadget used in <strong>truck maintenance</strong> or heavy-duty machines. It helps clean the oil while the engine is still working! Instead of trying to clean all the oil at once (which is what the normal filter does), this <strong>bypass oil filter</strong> takes small bits of oil at a time and gives them a super deep clean.
-<p>So, when a car has a <strong>bypass oil filtration system</strong>, it doesn’t just run — it runs smoother, stays cleaner, and lasts longer. It’s like giving your engine a little helper that works behind the scenes to keep it healthy, which is super important for <strong>heavy-duty engine care</strong> and performance.
-
-        <h3>How Do Bypass Filters Work?</h3>
-<figure>
-  <img src="https://tse4.mm.bing.net/th/id/OIP.IDA7LIPoSSc6g6bANDhURwHaJY?pid=Api" alt="Oil Filter Cutaway">
-  <figcaption>This is like the magic straw that sips and scrubs the oil clean.</figcaption>
-</figure>
-<p>Imagine you're sipping juice with a straw — but instead of drinking it all, you just take a tiny sip at a time and clean it before putting it back. That’s what a bypass filter does! It takes just a little bit of oil, sends it through a super-powerful sponge, and puts it back all clean while the engine keeps playing.</p>
-
-        <h3>Why Are Bypass Filters Super Cool?</h3>
-<figure>
-  <img src="https://tse4.mm.bing.net/th/id/OIP.vfBWLsT2yVzj_ZYSIWomawHaE5?pid=Api" alt="Happy Engine">
-  <figcaption>Clean oil makes engines happy and strong!</figcaption>
-</figure>
-<ul>
-  <li>They grab the tiniest dirt bits — like superhero glasses spotting tiny germs!</li>
-  <li>They keep the engine oil clean longer — like brushing your teeth for your car.</li>
-  <li>Your engine stays happy and doesn’t have to work too hard.</li>
-  <li>You don’t need to change the oil as often, which saves time and money.</li>
-</ul>
-
-        <h3>Who Needs These Magic Filters?</h3>
-<figure>
-  <img src="https://tse4.mm.bing.net/th/id/OIP.XiUq6fIRrS0satpsZvhtQQHaEf?pid=Api" alt="Big Truck">
-  <figcaption>Big trucks that drive all day really love bypass filters!</figcaption>
-</figure>
-<p>These filters are perfect for big machines and trucks that drive a lot or work really hard. If the engine is always on the move, a bypass filter helps it feel fresh, clean, and ready to zoom — just like giving your superhero cape a wash every day.</p>
-
-        <p>So if you want your car or truck to live a long, healthy life, a bypass filter is like giving it a best friend who loves to clean. And a clean engine means more fun drives with fewer problems. Yay for happy engines!</p>
-
-        <p><a href="../index.html">← Back to Homepage</a></p>
-      </div>
+      <h2>What Is a Bypass Filter?</h2>
+      <p>Okay, so let’s say your bike or scooter needs oil to keep the wheels spinning smoothly. A car’s engine is kind of the same — it needs <strong>engine oil</strong> to stay cool and run well. But after a while, the oil gets dirty from all the dust, heat, and gunk inside the engine. That’s where a <strong>bypass filter</strong> comes in — a special type of <strong>engine oil filter</strong> that’s really good at cleaning things up.</p>
+      <p>It’s like a special cleaning gadget used in <strong>truck maintenance</strong> or heavy-duty machines. It helps clean the oil while the engine is still working! Instead of trying to clean all the oil at once (which is what the normal filter does), this <strong>bypass oil filter</strong> takes small bits of oil at a time and gives them a super deep clean.</p>
+      <p>So, when a car has a <strong>bypass oil filtration system</strong>, it doesn’t just run — it runs smoother, stays cleaner, and lasts longer. It’s like giving your engine a little helper that works behind the scenes to keep it healthy, which is super important for <strong>heavy-duty engine care</strong> and performance.</p>
+      <h3>How Do Bypass Filters Work?</h3>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Oil_filter_opened.JPG" alt="Oil Filter Cutaway">
+        <figcaption>This is like the magic straw that sips and scrubs the oil clean.</figcaption>
+      </figure>
+      <p>Bypass filters slowly pull in a small amount of oil while the engine is working, clean it really well, and then return it. They work side-by-side with the regular filter, like a backup cleaner that takes care of the stuff the main one misses.</p>
+      <h3>Why Are Bypass Filters Super Cool?</h3>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Engine_Rover_K_series.jpg" alt="Happy Engine">
+        <figcaption>Clean oil makes engines happy and strong!</figcaption>
+      </figure>
+      <ul>
+        <li>They grab the tiniest dirt bits — like superhero glasses spotting tiny germs!</li>
+        <li>They keep the engine oil clean longer — like brushing your teeth for your car.</li>
+        <li>Your engine stays happy and doesn’t have to work too hard.</li>
+        <li>You don’t need to change the oil as often, which saves time and money.</li>
+      </ul>
+      <h3>Who Needs These Magic Filters?</h3>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Mack_Trucks_CXU613.jpg" alt="Big Truck">
+        <figcaption>Big trucks that drive all day really love bypass filters!</figcaption>
+      </figure>
+      <p>These filters are perfect for big machines and trucks that drive a lot or work really hard. If the engine is always on the move, a bypass filter helps it feel fresh, clean, and ready to zoom — just like giving your superhero cape a wash every day.</p>
+      <p>So if you want your car or truck to live a long, healthy life, a bypass filter is like giving it a best friend who loves to clean. And a clean engine means more fun drives with fewer problems. Yay for happy engines!</p>
       <div class="ad-banner-bottom">[ Bottom Banner Ad Placeholder ]</div>
     </main>
     <aside class="sidebar">
@@ -197,17 +184,15 @@
       </div>
     </aside>
   </div>
-  <div style="font-size: 0.85rem; color: #6b7280; margin-top: 30px;">
-  <p><strong>Image Credits:</strong></p>
-  <ul style="list-style: disc; padding-left: 20px;">
-    <li>Header Car Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
-    <li>Oil Filter Cutaway Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
-    <li>Happy Engine Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
-    <li>Big Truck Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
-  </ul>
-</div>
-
-$1© 2025 Bypass Filters Hub — All rights reserved.
+  <footer>
+    <p><strong>Image Credits:</strong></p>
+    <ul style="list-style: disc; padding-left: 20px; font-size: 0.85rem; color: #6b7280;">
+      <li>Header Car Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
+      <li>Oil Filter Cutaway Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
+      <li>Happy Engine Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
+      <li>Big Truck Image via <a href="https://www.bing.com/images" target="_blank" rel="noopener">Bing Image Search</a></li>
+    </ul>
+    <p>© 2025 Bypass Filters Hub — All rights reserved.</p>
   </footer>
 </body>
 </html>
