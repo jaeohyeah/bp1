@@ -10,41 +10,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background: #ffffff; color: #222; line-height: 1.7; }
+    body { font-family: 'Open Sans', sans-serif; background: #f3f4f6; color: #333; }
     header {
-      background: #0f172a; color: #fff; padding: 60px 20px 30px;
+      background: #111; color: #fff; padding: 40px 20px;
       text-align: center; font-family: 'Chakra Petch', sans-serif;
     }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.1rem; color: #94a3b8; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.8; }
     nav {
-      background: #1e293b; display: flex; justify-content: center;
-      gap: 40px; padding: 16px 0;
+      background: #222; display: flex; justify-content: center;
+      gap: 30px; padding: 10px 0;
     }
-    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 1rem; }
-    nav a:hover { color: #facc15; }
+    nav a { color: #fefefe; text-decoration: none; font-weight: bold; }
     .container {
-      max-width: 1200px; margin: 50px auto; padding: 0 24px;
-      display: grid; grid-template-columns: 3fr 1fr; gap: 40px;
+      max-width: 1200px; margin: auto; padding: 20px;
+      display: grid; grid-template-columns: 3fr 1fr; gap: 30px;
     }
     main {
-      background: white; padding: 40px 30px;
-      border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+      background: white; padding: 30px;
+      border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    main h2 { font-size: 2rem; margin-bottom: 20px; color: #0f172a; }
-    main h3 { margin-top: 40px; font-size: 1.5rem; color: #1e293b; }
-    main p, main li { font-size: 1.05rem; margin-bottom: 20px; }
+    main h2, main h3 {
+      background: rgba(224,242,254,0.6);
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    main h2 { font-size: 2rem; color: #0f172a; }
+    main h3 { font-size: 1.4rem; color: #1e293b; margin-top: 40px; }
+    main p, main li { font-size: 1rem; margin-bottom: 20px; }
     main ul { padding-left: 20px; }
-    .article-container img {
-      width: 100%; max-width: 100%; border-radius: 10px; margin: 30px 0;
+    .article-container figure {
+      float: right;
+      margin: 0 0 20px 20px;
+      width: 240px;
+      max-width: 40%;
+      text-align: center;
     }
-    .credit { font-size: 0.85em; color: #64748b; margin-bottom: 40px; }
+    .article-container img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+    .article-container figcaption {
+      font-size: 0.85em;
+      color: #64748b;
+      margin-top: 8px;
+    }
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin: 20px 0;
+    }
+    .breadcrumb a { color: #0077cc; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
     .ad-banner-top, .ad-banner-bottom {
-      background: #fef9c3;
-      border: 2px dashed #facc15;
+      background: #fff3cd;
+      border: 2px dashed #f0ad4e;
       padding: 20px;
       text-align: center;
-      margin: 40px 0;
+      margin: 20px auto;
+      max-width: 1000px;
       font-weight: bold;
     }
     .sidebar {
@@ -60,17 +85,25 @@
     .sidebar ul li a { color: #0077cc; text-decoration: none; font-weight: bold; }
     .sidebar ul li a:hover { text-decoration: underline; }
     footer {
-      background: #0f172a; color: #e2e8f0; text-align: center;
-      padding: 30px; margin-top: 60px;
+      background: #111; color: white; text-align: center;
+      padding: 20px; margin-top: 40px;
     }
-    a { color: #3b82f6; text-decoration: none; }
+    a { color: #0077cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    @media screen and (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+      .article-container figure {
+        float: none;
+        width: 100%;
+        margin: 20px auto;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Bypass Filters Hub</h1>
-    <p>Your trusted source for engine protection insights</p>
+    <p>Breaking down oil filtration one micron at a time.</p>
   </header>
   <nav>
     <a href="../index.html">Home</a>
@@ -80,19 +113,22 @@
   </nav>
   <div class="container">
     <main>
+      <div class="breadcrumb"><a href="../index.html">Home</a> › What Is a Bypass Filter?</div>
       <div class="ad-banner-top">[ Top Banner Ad Placeholder ]</div>
       <div class="article-container">
         <h2>What Is a Bypass Filter?</h2>
+        <figure>
+          <img src="https://tse4.mm.bing.net/th/id/OIP.1H8TT172SfVcVN28RkUyxQHaHa?pid=Api" alt="Bypass Oil Filter Cutaway">
+          <figcaption>Image source: Bing Images (used via CDN)</figcaption>
+        </figure>
         <p>A <strong>bypass oil filter</strong> is a specialized engine filtration component designed to clean a portion of the engine oil at a time with high precision. Unlike traditional full-flow filters, which treat all circulating oil, a bypass filter targets ultra-fine particles, providing a deeper level of filtration.</p>
 
-        <img src="https://tse4.mm.bing.net/th/id/OIP.1H8TT172SfVcVN28RkUyxQHaHa?pid=Api" alt="Bypass Oil Filter Cutaway">
-        <p class="credit">Image source: Bing Images (used via CDN)</p>
-
         <h3>How Do Bypass Filters Work?</h3>
+        <figure>
+          <img src="https://tse2.mm.bing.net/th/id/OIP.kUncHVMYmrFcAhh-zepFmAHaEK?pid=Api" alt="Oil Filter Cutaway">
+          <figcaption>Image source: Bing Images (used via CDN)</figcaption>
+        </figure>
         <p>Bypass oil filters operate by diverting a small stream—typically around 5–10%—of the oil from the main circulation loop. This diverted oil passes through a dense filter media capable of capturing microscopic debris, then returns to the sump. These filters function alongside standard full-flow filters to offer enhanced protection for engine components.</p>
-
-        <img src="https://tse2.mm.bing.net/th/id/OIP.kUncHVMYmrFcAhh-zepFmAHaEK?pid=Api" alt="Oil Filter Cutaway">
-        <p class="credit">Image source: Bing Images (used via CDN)</p>
 
         <h3>Top Benefits of Bypass Filters</h3>
         <ul>
