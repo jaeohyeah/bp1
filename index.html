@@ -5,85 +5,154 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Contact Us</title>
+<title>Bypass Filters Hub</title>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Open Sans', sans-serif; background: #f4f7f9; color: #333; }
+    body { font-family: 'Open Sans', sans-serif; background: #f3f4f6; color: #333; }
     header {
       background: #111; color: #fff; padding: 40px 20px;
       text-align: center; font-family: 'Chakra Petch', sans-serif;
     }
-    header h1 { font-size: 2.5rem; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.8; }
     nav {
       background: #222; display: flex; justify-content: center;
       gap: 30px; padding: 10px 0;
     }
     nav a { color: #fefefe; text-decoration: none; font-weight: bold; }
     .container {
-      max-width: 1200px; margin: 40px auto; padding: 0 20px;
-      display: grid; grid-template-columns: 3fr 1fr; gap: 30px;
+      max-width: 1200px; margin: auto; padding: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
     }
-    main {
-      background: white; padding: 30px;
-      border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .article-card {
+      background: white; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .sidebar {
-      background: #d1ecf1;
-      border: 2px dashed #0c5460;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-      height: fit-content;
-    }
-    .ad-banner-top, .ad-banner-bottom {
-      background: #fff3cd;
-      border: 2px dashed #f0ad4e;
-      padding: 20px;
-      text-align: center;
-      margin: 20px auto;
-      max-width: 1000px;
-      font-weight: bold;
-    }
+    .article-card img { width: 100%; height: 200px; object-fit: cover; }
+    .article-content { padding: 15px; }
+    .article-content h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .article-content p { font-size: 0.9rem; color: #666; }
     footer {
       background: #111; color: white; text-align: center;
       padding: 20px; margin-top: 40px;
     }
-    a { color: #0077cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  
+.ad-banner-top, .ad-banner-bottom {
+  background: #fff3cd;
+  border: 2px dashed #f0ad4e;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1000px;
+  font-weight: bold;
+}
+.ad-box {
+  background: #d1ecf1;
+  border: 2px dashed #0c5460;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+</style>
 </head>
 <body>
 <header>
-<h1>Contact Us</h1>
+<h1>Bypass Filters Hub</h1>
+<p>Breaking down oil filtration one micron at a time.</p>
 </header>
 <nav>
-<a href="../index.html">Home</a>
-<a href="../guides.html">Guides</a>
-<a href="../faqs.html">FAQs</a>
-<a href="../contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="guides.html">Guides</a>
+<a href="faqs.html">FAQs</a>
+<a href="contact.html">Contact</a>
 </nav>
 <div class="ad-banner-top">[ Top Banner Ad Placeholder ]</div>
-<div class="container">
-<main>
-<p>
-<p>We’d love to hear from you. Reach out with your questions or feedback.</p>
-<form style="margin-top:20px; display: flex; flex-direction: column; gap: 10px; max-width: 500px;">
-<input placeholder="Your Name" style="padding: 10px; font-size: 1rem;" type="text"/>
-<input placeholder="Your Email" style="padding: 10px; font-size: 1rem;" type="email"/>
-<textarea placeholder="Your Message" rows="5" style="padding: 10px; font-size: 1rem;"></textarea>
-<button style="padding: 10px; background: #0077cc; color: white; border: none;" type="submit">Send</button>
-</form>
-</p>
-<p>This is a placeholder for the full article content. Check back soon!</p>
-<p><a href="../index.html">← Back to Homepage</a></p>
-<div class="ad-banner-bottom">[ Bottom Banner Ad Placeholder ]</div>
-</main>
-<aside class="sidebar">
-      [ Sidebar Ad Placeholder ]
-    </aside>
+<div class="container" style="display: grid; grid-template-columns: 3fr 1fr; gap: 30px;">
+<div class="article-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"><div class="article-card">
+<a href="articles/bypass-filter.html">
+<img alt="What Is a Bypass Filter?" src="article-icons/bypass-filter.png"/>
+<div class="article-content">
+<h3>What Is a Bypass Filter?</h3>
+<p>Understand how bypass filters protect your engine.</p>
 </div>
+</a>
+</div><div class="article-card">
+<a href="articles/installation-tips.html">
+<img alt="Installation Tips for Beginners" src="article-icons/installation-tips.png"/>
+<div class="article-content">
+<h3>Installation Tips for Beginners</h3>
+<p>Install your first bypass oil filter system.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/top-brands.html">
+<img alt="Top Bypass Filter Brands in 2025" src="article-icons/top-brands.png"/>
+<div class="article-content">
+<h3>Top Bypass Filter Brands in 2025</h3>
+<p>Compare the most reliable filters on the market.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/vs-full-flow.html">
+<img alt="Bypass vs Full-Flow Filters" src="article-icons/vs-full-flow.png"/>
+<div class="article-content">
+<h3>Bypass vs Full-Flow Filters</h3>
+<p>What's the difference and when to use each?</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/replace-signs.html">
+<img alt="Signs Your Filter Needs Replacing" src="article-icons/replace-signs.png"/>
+<div class="article-content">
+<h3>Signs Your Filter Needs Replacing</h3>
+<p>Learn the telltale signs of a clogged filter.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/maintenance.html">
+<img alt="DIY Filter Maintenance Guide" src="article-icons/maintenance.png"/>
+<div class="article-content">
+<h3>DIY Filter Maintenance Guide</h3>
+<p>Keep your bypass filter in top condition.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/diesel-best.html">
+<img alt="Best Filters for Diesel Engines" src="article-icons/diesel-best.png"/>
+<div class="article-content">
+<h3>Best Filters for Diesel Engines</h3>
+<p>Our picks for high-performance diesel filters.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/oil-viscosity.html">
+<img alt="How Oil Viscosity Affects Filtering" src="article-icons/oil-viscosity.png"/>
+<div class="article-content">
+<h3>How Oil Viscosity Affects Filtering</h3>
+<p>The science behind oil flow and efficiency.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/fleet-use.html">
+<img alt="Bypass Filters in Fleet Management" src="article-icons/fleet-use.png"/>
+<div class="article-content">
+<h3>Bypass Filters in Fleet Management</h3>
+<p>Why fleet operators are making the switch.</p>
+</div>
+</a>
+</div><div class="article-card">
+<a href="articles/filter-myths.html">
+<img alt="Common Myths About Bypass Filters" src="article-icons/filter-myths.png"/>
+<div class="article-content">
+<h3>Common Myths About Bypass Filters</h3>
+<p>Debunking misconceptions and marketing fluff.</p>
+</div>
+</a>
+</div></div><div class="sidebar"><div class="ad-box">[ Sidebar Ad Placeholder ]</div></div></div>
+<div class="ad-banner-bottom">[ Bottom Banner Ad Placeholder ]</div>
 <footer>
     © 2025 Bypass Filters Hub — All rights reserved.
   </footer>
